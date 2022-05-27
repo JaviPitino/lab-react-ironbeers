@@ -38,19 +38,31 @@ function ListBeers() {
 
   return (
 
-    <div>
+    <div className="list-beer">
         <div className="navbar" >
             <Navbar />
         </div>
         {
             listBeer.map((eachBeer) => {
-                return (
-                    <li key={eachBeer._id}>
-                        <Link to={`/${eachBeer._id}`}>{eachBeer.name}</Link>
-                    </li>
-                )
+            return (
+                <div className='container' key={eachBeer._id}>
+                    <div>
+                    <Link to={`/${eachBeer._id}`}>
+                        <img src={eachBeer.image_url} alt="image" width={30} />
+                    </Link>
+                    </div> 
+                    <div>
+                        <p>{eachBeer.name}</p>
+                        <p>{eachBeer.tagline}</p>
+                        <p>{eachBeer.contributed_by}</p>  
+                        <hr />
+                    </div> 
+                    
+                </div>
+            )
             })
         }
+      
     </div>
   )
 }

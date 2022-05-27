@@ -28,9 +28,18 @@
   color: #61dafb;
 }
 
+.list-beer {
+  width: 100%;
+}
+
 .navbar {
-  padding: 20px;
+  padding: 10px 0;
   background-color: rgb(85, 161, 231);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
   width: 100%;
 }
 
