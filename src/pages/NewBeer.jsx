@@ -55,80 +55,89 @@ function NewBeer() {
   return (
     <div>
       <Navbar />
-      <h1>New Beer</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">
-          <strong>Name: </strong>
-        </label>
-        <input
-          type="text"
-          name="name"
-          value={name}
-          onChange={handleNameChange}
-        />
-        <br />
-        <label htmlFor="tagline">
-          <strong>Tagline: </strong>
-        </label>
-        <input
-          type="text"
-          name="tagline"
-          value={tagline}
-          onChange={handleTagLineChange}
-        />
-        <br />
-        <label htmlFor="description">
-          <strong>Description: </strong>
-        </label>
-        <input
-          type="text"
-          name="description"
-          value={description}
-          onChange={handleDescriptionChange}
-        />
-        <br />
-        <label htmlFor="first_brewed">
-          <strong>First Brewed: </strong>
-        </label>
-        <input
-          type="text"
-          name="first_brewed"
-          value={first_brewed}
-          onChange={handleFirstBrewedChange}
-        />
-        <br />
-        <label htmlFor="brewers_tips">
-          <strong>Brewers Tips: </strong>
-        </label>
-        <input
-          type="text"
-          name="brewers_tips"
-          value={brewers_tips}
-          onChange={handleBrewersTipsChange}
-        />
-        <br />
-        <label htmlFor="attenuation_level">
-          <strong>Attenuation Level : </strong>
-        </label>
-        <input
-          type="number"
-          name="attenuation_level"
-          value={attenuation_level}
-          onChange={handleAttenuationChange}
-        />
-        <br />
-        <label htmlFor="contributed_by">
-          <strong>Contributed by: </strong>
-        </label>
-        <input
-          type="text"
-          name="contributed_by"
-          value={contributed_by}
-          onChange={handleContributedChange}
-        />
-        <br />
-        <button> ADD NEW </button>
-      </form>
+      <h1>Add your Beer</h1>
+      <div id="form-center" className="container-fluid">
+          <div className="row col-6" id="map_section">
+            <div>
+              <form onSubmit={handleSubmit}>
+                <label htmlFor="name">
+                  <strong>Name: </strong>
+                </label>
+                <div className="col-xxl-12">
+                <input className="form-control"
+                  type="text"
+                  name="name"
+                  value={name}
+                  onChange={handleNameChange}
+                />
+                </div>
+                <br />
+                <label htmlFor="tagline">
+                  <strong>Tagline: </strong>
+                </label>
+                <input className="form-control"
+                  type="text"
+                  name="tagline"
+                  value={tagline}
+                  onChange={handleTagLineChange}
+                />
+                <br />
+                <label htmlFor="description">
+                  <strong>Description: </strong>
+                </label>
+                <input className="form-control"
+                  type="text"
+                  name="description"
+                  value={description}
+                  onChange={handleDescriptionChange}
+                />
+                <br />
+                <label htmlFor="first_brewed">
+                  <strong>First Brewed: </strong>
+                </label>
+                <input className="form-control"
+                  type="text"
+                  name="first_brewed"
+                  value={first_brewed}
+                  onChange={handleFirstBrewedChange}
+                />
+                <br />
+                <label htmlFor="brewers_tips">
+                  <strong>Brewers Tips: </strong>
+                </label>
+                <input className="form-control"
+                  type="text"
+                  name="brewers_tips"
+                  value={brewers_tips}
+                  onChange={handleBrewersTipsChange}
+                />
+                <br />
+                <label htmlFor="attenuation_level">
+                  <strong>Attenuation Level : </strong>
+                </label>
+                <input className="form-control"
+                  type="number"
+                  name="attenuation_level"
+                  value={attenuation_level}
+                  onChange={handleAttenuationChange}
+                />
+                <br />
+                <label htmlFor="contributed_by">
+                  <strong>Contributed by: </strong>
+                </label>
+                <input className="form-control"
+                  type="text"
+                  name="contributed_by"
+                  value={contributed_by}
+                  onChange={handleContributedChange}
+                />
+                <br />
+                <button className="btn btn-primary"> ADD NEW </button>
+              </form>
+              </div>
+          </div>
+      </div>
+     
     </div>
   );
 }

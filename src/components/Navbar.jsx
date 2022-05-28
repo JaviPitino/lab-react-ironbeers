@@ -4,7 +4,7 @@ import HomeImg from '../assets/homeicon.png'
 
 function Navbar() {
   return (
-    <div className="navbar" >
+    <div className="navbar container-fluid d-block">
      <NavLink to="/"> <img src={HomeImg} alt="home" /> </NavLink>
     </div>
   )

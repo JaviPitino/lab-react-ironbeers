@@ -38,7 +38,7 @@ function ListBeers() {
   return (
 
     <div className="list-beer">
-        <div className="navbar" >
+        <div >
             <Navbar />
         </div>
         {
