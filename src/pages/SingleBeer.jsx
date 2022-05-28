@@ -35,10 +35,10 @@ function SingleBeer() {
     }
 
 
-
+  // 5. Renderizar
   return (
     <div>
-    <Navbar />
+        <Navbar />
         <h1> Lista de Beers </h1>
         <img src={beerDetails.image_url} alt="beer" width={80} />
         <p>{beerDetails.name}</p>
@@ -48,9 +48,7 @@ function SingleBeer() {
         <p>{beerDetails.description}</p>
         <p>{beerDetails.contributed_by}</p>
 
-    <Link to="/beers"> 
-
-    </Link>
+        <Link to="/beers"></Link>
     </div>
   )
 }

@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 function Home() {
   return (
     <div>
-        <h1>Bienvenidos a Beers</h1>
+        <h1>Qué ganas de una cervecita!</h1>
         <NavLink to="/beers" >
         <img src="../beers.png" alt="Cerveza" />
          <h2>All Beers</h2>

@@ -3,7 +3,6 @@ import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import { useState, useEffect } from 'react'
-import { useParams } from 'react'
 
 function ListBeers() {
 
