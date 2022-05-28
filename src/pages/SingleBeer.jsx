@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import MoonLoader from "react-spinners/MoonLoader";
 
 function SingleBeer() {
 
@@ -30,8 +31,8 @@ function SingleBeer() {
     }
 
     // 4. Efecto Loading
-    if ( loading === true ) {
-        return <h3>...loading...</h3>
+    if ( loading === true) {
+        return <MoonLoader />
     }
 
 

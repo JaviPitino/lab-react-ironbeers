@@ -14,11 +14,15 @@ function Search(props) {
 
    // 3. Renderizar
   return (
-    <div>
+
+    <div id="form-center" className="container-fluid">
+          <div className="row col-6" id="map_section">
         <form>
-            <label htmlFor="search">Search Beer: </label>
-            <input type="text" name='search' onChange={handleSearch} value={search} />
+            <label htmlFor="search"></label>
+            <input className="form-control" type="text" name='search' placeholder='Search your beer' onChange={handleSearch} value={search} />
+            <br />
         </form>
+        </div>
     </div>
   )
 }

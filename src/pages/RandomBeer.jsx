@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import axios from 'axios'
+import MoonLoader from "react-spinners/MoonLoader";
 
 function RandomBeer() {
 
@@ -28,24 +29,30 @@ function RandomBeer() {
   }
 
   // 4. Efecto loading
-  if ( loading === true ) {
-    return <h3>...Loading...</h3>
-  }
+  if ( loading === true) {
+    return <MoonLoader />
+}
 
   // 5. Renderizar
   return (
     <div>
+      <div>
         <Navbar />
-        <h1> RandomBeer </h1> 
-        <img src={randomBeer.image_url} alt="beer" width={80} />
-        <p>{randomBeer.name}</p>
-        <p>{randomBeer.tagline}</p>
-        <p>{randomBeer.first_brewed}</p>
-        <p>{randomBeer.attenuation_level}</p>
-        <p>{randomBeer.description}</p>
-        <p>{randomBeer.contributed_by}</p>
-
+      </div>
+      <div className="container">
+        <div className='img-container'>
+          <img src={randomBeer.image_url} alt="beer" width={80} />
+        </div>
+        <div className='text-container'>
+          <h4>{randomBeer.name}</h4>
+          <h5>{randomBeer.tagline}</h5>
+          <h6>{randomBeer.first_brewed}</h6>
+          <p>{randomBeer.attenuation_level}</p>
+          <p>{randomBeer.description}</p>
+          <p>{randomBeer.contributed_by}</p>
+        </div>
         <Link to="/random"></Link>
+      </div>
     </div>
   )
 }

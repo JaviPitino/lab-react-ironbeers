@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import { useState, useEffect } from 'react'
 import Search from '../components/Search'
+import MoonLoader from "react-spinners/MoonLoader";
 
 function ListBeers() {
 
@@ -43,7 +44,7 @@ function ListBeers() {
 
     // 4. Error
     if ( loading === true) {
-        return <h3>...loading...</h3>
+        return <MoonLoader />
     }
 
   return (
@@ -58,21 +59,24 @@ function ListBeers() {
         {
             listBeerToDisplay.map((eachBeer) => {
             return (
-                <div className='container' key={eachBeer._id}>
-                    <div>
-                    <Link to={`/${eachBeer._id}`}>
-                        <img src={eachBeer.image_url} alt="image" width={30} />
-                    </Link>
-                    </div> 
-                    <div>
-                        <p>{eachBeer.name}</p>
-                        <p>{eachBeer.tagline}</p>
-                        <p>{eachBeer.contributed_by}</p>  
+                <div>
+                    <div className='container' key={eachBeer._id}>
+                        <div className='img-container-list'>
+                        <Link to={`/${eachBeer._id}`}>
+                            <img src={eachBeer.image_url} alt="image" width={30} />
+                        </Link>
+                        </div> 
+                        <div>
+                            <h4>{eachBeer.name}</h4>
+                            <h5>{eachBeer.tagline}</h5>
+                            <p>{eachBeer.contributed_by}</p>  
+                        </div> 
                         <hr />
-                    </div> 
-                    
+                    </div>
+                    <hr />
                 </div>
             )
+            
             })
         }
       
