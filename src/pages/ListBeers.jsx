@@ -66,10 +66,12 @@ function ListBeers() {
                             <img src={eachBeer.image_url} alt="image" width={30} />
                         </Link>
                         </div> 
-                        <div>
+                        <div className="text-link">
+                        <Link to={`/${eachBeer._id}`}>
                             <h4>{eachBeer.name}</h4>
                             <h5>{eachBeer.tagline}</h5>
                             <p>{eachBeer.contributed_by}</p>  
+                        </Link>
                         </div> 
                         <hr />
                     </div>

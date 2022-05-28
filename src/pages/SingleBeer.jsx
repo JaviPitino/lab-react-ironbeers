@@ -39,16 +39,22 @@ function SingleBeer() {
   // 5. Renderizar
   return (
     <div>
+       <div>
         <Navbar />
-        <h1> Lista de Beers </h1>
-        <img src={beerDetails.image_url} alt="beer" width={80} />
-        <p>{beerDetails.name}</p>
-        <p>{beerDetails.tagline}</p>
-        <p>{beerDetails.first_brewed}</p>
-        <p>{beerDetails.attenuation_level}</p>
-        <p>{beerDetails.description}</p>
-        <p>{beerDetails.contributed_by}</p>
-
+      </div>
+        <div className="container">
+            <div className='img-container'>
+                <img src={beerDetails.image_url} alt="beer" width={80} />
+            </div>
+            <div className='text-container'>
+                <h4>{beerDetails.name}</h4>
+                <h5>{beerDetails.tagline}</h5>
+                <h6>{beerDetails.first_brewed}</h6>
+                <p>{beerDetails.attenuation_level}</p>
+                <p>{beerDetails.description}</p>
+                <p>{beerDetails.contributed_by}</p>
+            </div>
+        </div>
         <Link to="/beers"></Link>
     </div>
   )

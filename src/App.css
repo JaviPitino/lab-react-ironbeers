@@ -25,8 +25,11 @@
   height: 150px;
 }
 
-.text-container p {
+.text-link h5, p {
+  color: rgb(68, 58, 58);
+}
 
+.text-container p {
   line-height: 16px;
 }
 
